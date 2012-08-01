@@ -16,3 +16,4 @@ _Chris Patterson, Chris.Patterson@RelayHealth.com_
 
 * [Introduction (this document)](http://ndhaxpgit01.mckesson.com/PlatformSDK/PlatformSDK-Documentation/blob/master/README.md) 
 * [Managing GitHub Repositories](http://ndhaxpgit01.mckesson.com/PlatformSDK/PlatformSDK-Documentation/blob/master/ManagingRepositories.md)
+* [A Day in the Life with Git](http://ndhaxpgit01.mckesson.com/PlatformSDK/PlatformSDK-Documentation/blob/master/ADayInTheLifeWithGit.md)
