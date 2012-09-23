@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="SendMessage.SOAP.SoapUI" resourceRoot="" soapui-version="4.5.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="soap11" type="wsdl" bindingName="{http://api.relayhealth.com/2012/05/messaging/sendMessage}soap11" soapVersion="1_2" anonymous="optional" definition="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/SendMessage.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/SendMessage.svc?wsdl"><con:part><con:url>https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/SendMessage.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="sendMessage" targetNamespace="http://api.relayhealth.com/2012/05/messaging" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://api.relayhealth.com/2012/05/messaging" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://api.relayhealth.com/2012/05/messaging/sendMessage" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:import namespace="http://api.relayhealth.com/2012/05/messaging/sendMessage" location="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/SendMessage.svc?wsdl=wsdl0"/>
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://api.relayhealth.com/2012/05/messaging">
+      <xsd:element name="postbyid">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="id" type="q1:guid" xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="postbyidResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="postbyidResult" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="post">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="request" nillable="true" type="q2:messagerequest" xmlns:q2="http://api.relayhealth.com/2012/08/messaging/types"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="postResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="postResult" type="q3:guid" xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+      <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+      <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+      <xs:element name="byte" nillable="true" type="xs:byte"/>
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+      <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+      <xs:element name="double" nillable="true" type="xs:double"/>
+      <xs:element name="float" nillable="true" type="xs:float"/>
+      <xs:element name="int" nillable="true" type="xs:int"/>
+      <xs:element name="long" nillable="true" type="xs:long"/>
+      <xs:element name="QName" nillable="true" type="xs:QName"/>
+      <xs:element name="short" nillable="true" type="xs:short"/>
+      <xs:element name="string" nillable="true" type="xs:string"/>
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+      <xs:element name="char" nillable="true" type="tns:char"/>
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int"/>
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration"/>
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid"/>
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName"/>
+      <xs:attribute name="Id" type="xs:ID"/>
+      <xs:attribute name="Ref" type="xs:IDREF"/>
+    </xs:schema>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://api.relayhealth.com/2012/08/messaging/types" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://api.relayhealth.com/2012/08/messaging/types">
+      <xsd:complexType name="messagerequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Attachments" nillable="true" type="tns:ArrayOfattachmentrequest"/>
+          <xsd:element minOccurs="0" name="Body" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="CC" nillable="true" type="q4:ArrayOfaddress" xmlns:q4="http://api.relayhealth.com/2012/05/messaging/types"/>
+          <xsd:element minOccurs="0" name="From" nillable="true" type="q5:address" xmlns:q5="http://api.relayhealth.com/2012/05/messaging/types"/>
+          <xsd:element minOccurs="0" name="Id" type="ser:guid"/>
+          <xsd:element minOccurs="0" name="Subject" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="To" nillable="true" type="q6:ArrayOfaddress" xmlns:q6="http://api.relayhealth.com/2012/05/messaging/types"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="messagerequest" nillable="true" type="tns:messagerequest"/>
+      <xsd:complexType name="ArrayOfattachmentrequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="attachmentrequest" nillable="true" type="tns:attachmentrequest"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfattachmentrequest" nillable="true" type="tns:ArrayOfattachmentrequest"/>
+      <xsd:complexType name="attachmentrequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Content" nillable="true" type="xsd:base64Binary"/>
+          <xsd:element minOccurs="0" name="ContentMimeType" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Encoding" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="FileName" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Id" type="ser:guid"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="attachmentrequest" nillable="true" type="tns:attachmentrequest"/>
+    </xsd:schema>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://api.relayhealth.com/2012/05/messaging/types" xmlns:tns="http://api.relayhealth.com/2012/05/messaging/types">
+      <xsd:complexType name="invalidoperationfault">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="q7:fault" xmlns:q7="http://api.relayhealth.com/2012/05/types">
+            <xsd:sequence/>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:element name="invalidoperationfault" nillable="true" type="tns:invalidoperationfault"/>
+      <xsd:complexType name="formatfault">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="q8:fault" xmlns:q8="http://api.relayhealth.com/2012/05/types">
+            <xsd:sequence/>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:element name="formatfault" nillable="true" type="tns:formatfault"/>
+      <xsd:complexType name="accessdeniedfault">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="q9:fault" xmlns:q9="http://api.relayhealth.com/2012/05/types">
+            <xsd:sequence/>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:element name="accessdeniedfault" nillable="true" type="tns:accessdeniedfault"/>
+      <xsd:complexType name="ArrayOfaddress">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="address" nillable="true" type="tns:address"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfaddress" nillable="true" type="tns:ArrayOfaddress"/>
+      <xsd:complexType name="address">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Type" type="tns:addresstype"/>
+          <xsd:element minOccurs="0" name="Value" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="address" nillable="true" type="tns:address"/>
+      <xsd:simpleType name="addresstype">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="Unspecified"/>
+          <xsd:enumeration value="Direct"/>
+          <xsd:enumeration value="Email"/>
+          <xsd:enumeration value="Fax"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:element name="addresstype" nillable="true" type="tns:addresstype"/>
+    </xsd:schema>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://api.relayhealth.com/2012/05/types" xmlns:tns="http://api.relayhealth.com/2012/05/types">
+      <xsd:complexType name="fault">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Message" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="fault" nillable="true" type="tns:fault"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="sendMessage_postbyid_InputMessage">
+    <wsdl:part name="parameters" element="tns:postbyid"/>
+  </wsdl:message>
+  <wsdl:message name="sendMessage_postbyid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:postbyidResponse"/>
+  </wsdl:message>
+  <wsdl:message name="sendMessage_postbyid_InvalidOperationFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="q10:invalidoperationfault" xmlns:q10="http://api.relayhealth.com/2012/05/messaging/types"/>
+  </wsdl:message>
+  <wsdl:message name="sendMessage_postbyid_FaultFault_FaultMessage">
+    <wsdl:part name="detail" element="q11:fault" xmlns:q11="http://api.relayhealth.com/2012/05/types"/>
+  </wsdl:message>
+  <wsdl:message name="sendMessage_postbyid_FormatFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="q12:formatfault" xmlns:q12="http://api.relayhealth.com/2012/05/messaging/types"/>
+  </wsdl:message>
+  <wsdl:message name="sendMessage_postbyid_AccessDeniedFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="q13:accessdeniedfault" xmlns:q13="http://api.relayhealth.com/2012/05/messaging/types"/>
+  </wsdl:message>
+  <wsdl:message name="sendMessage_post_InputMessage">
+    <wsdl:part name="parameters" element="tns:post"/>
+  </wsdl:message>
+  <wsdl:message name="sendMessage_post_OutputMessage">
+    <wsdl:part name="parameters" element="tns:postResponse"/>
+  </wsdl:message>
+  <wsdl:message name="sendMessage_post_InvalidOperationFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="q14:invalidoperationfault" xmlns:q14="http://api.relayhealth.com/2012/05/messaging/types"/>
+  </wsdl:message>
+  <wsdl:message name="sendMessage_post_FaultFault_FaultMessage">
+    <wsdl:part name="detail" element="q15:fault" xmlns:q15="http://api.relayhealth.com/2012/05/types"/>
+  </wsdl:message>
+  <wsdl:message name="sendMessage_post_FormatFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="q16:formatfault" xmlns:q16="http://api.relayhealth.com/2012/05/messaging/types"/>
+  </wsdl:message>
+  <wsdl:message name="sendMessage_post_AccessDeniedFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="q17:accessdeniedfault" xmlns:q17="http://api.relayhealth.com/2012/05/messaging/types"/>
+  </wsdl:message>
+  <wsdl:portType name="sendMessage">
+    <wsdl:operation name="postbyid">
+      <wsdl:input wsaw:Action="http://api.relayhealth.com/2012/05/messaging/sendMessage/postbyid" message="tns:sendMessage_postbyid_InputMessage"/>
+      <wsdl:output wsaw:Action="http://api.relayhealth.com/2012/05/messaging/sendMessage/postbyidResponse" message="tns:sendMessage_postbyid_OutputMessage"/>
+      <wsdl:fault wsaw:Action="http://api.relayhealth.com/2012/05/messaging/sendMessage/postbyidInvalidOperationFaultFault" name="InvalidOperationFaultFault" message="tns:sendMessage_postbyid_InvalidOperationFaultFault_FaultMessage"/>
+      <wsdl:fault wsaw:Action="http://api.relayhealth.com/2012/05/messaging/sendMessage/postbyidFaultFault" name="FaultFault" message="tns:sendMessage_postbyid_FaultFault_FaultMessage"/>
+      <wsdl:fault wsaw:Action="http://api.relayhealth.com/2012/05/messaging/sendMessage/postbyidFormatFaultFault" name="FormatFaultFault" message="tns:sendMessage_postbyid_FormatFaultFault_FaultMessage"/>
+      <wsdl:fault wsaw:Action="http://api.relayhealth.com/2012/05/messaging/sendMessage/postbyidAccessDeniedFaultFault" name="AccessDeniedFaultFault" message="tns:sendMessage_postbyid_AccessDeniedFaultFault_FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="post">
+      <wsdl:input wsaw:Action="http://api.relayhealth.com/2012/05/messaging/sendMessage/post" message="tns:sendMessage_post_InputMessage"/>
+      <wsdl:output wsaw:Action="http://api.relayhealth.com/2012/05/messaging/sendMessage/postResponse" message="tns:sendMessage_post_OutputMessage"/>
+      <wsdl:fault wsaw:Action="http://api.relayhealth.com/2012/05/messaging/sendMessage/postInvalidOperationFaultFault" name="InvalidOperationFaultFault" message="tns:sendMessage_post_InvalidOperationFaultFault_FaultMessage"/>
+      <wsdl:fault wsaw:Action="http://api.relayhealth.com/2012/05/messaging/sendMessage/postFaultFault" name="FaultFault" message="tns:sendMessage_post_FaultFault_FaultMessage"/>
+      <wsdl:fault wsaw:Action="http://api.relayhealth.com/2012/05/messaging/sendMessage/postFormatFaultFault" name="FormatFaultFault" message="tns:sendMessage_post_FormatFaultFault_FaultMessage"/>
+      <wsdl:fault wsaw:Action="http://api.relayhealth.com/2012/05/messaging/sendMessage/postAccessDeniedFaultFault" name="AccessDeniedFaultFault" message="tns:sendMessage_post_AccessDeniedFaultFault_FaultMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="sendMessage">
+    <wsdl:port name="soap11" binding="i0:soap11">
+      <soap12:address location="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/SendMessage.svc"/>
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/SendMessage.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/SendMessage.svc?wsdl=wsdl0</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://api.relayhealth.com/2012/05/messaging/sendMessage" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://api.relayhealth.com/2012/05/messaging/sendMessage" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://api.relayhealth.com/2012/05/messaging" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsp:Policy wsu:Id="soap11_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization"/>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="true"/>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict/>
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing/>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://api.relayhealth.com/2012/05/messaging" location="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/SendMessage.svc?wsdl"/>
+  <wsdl:types/>
+  <wsdl:binding name="soap11" type="i0:sendMessage">
+    <wsp:PolicyReference URI="#soap11_policy"/>
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="postbyid">
+      <soap12:operation soapAction="http://api.relayhealth.com/2012/05/messaging/sendMessage/postbyid" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InvalidOperationFaultFault">
+        <soap12:fault name="InvalidOperationFaultFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="FaultFault">
+        <soap12:fault name="FaultFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="FormatFaultFault">
+        <soap12:fault name="FormatFaultFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="AccessDeniedFaultFault">
+        <soap12:fault name="AccessDeniedFaultFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="post">
+      <soap12:operation soapAction="http://api.relayhealth.com/2012/05/messaging/sendMessage/post" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InvalidOperationFaultFault">
+        <soap12:fault name="InvalidOperationFaultFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="FaultFault">
+        <soap12:fault name="FaultFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="FormatFaultFault">
+        <soap12:fault name="FormatFaultFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="AccessDeniedFaultFault">
+        <soap12:fault name="AccessDeniedFaultFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://api.integration.relayhealth.com/Messaging/SendMessage.svc</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://api.relayhealth.com/2012/05/messaging/sendMessage/post" name="post" bindingOperationName="post" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="post" useWsAddressing="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://api.integration.relayhealth.com/Messaging/SendMessage.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:mes="http://api.relayhealth.com/2012/05/messaging" xmlns:typ="http://api.relayhealth.com/2012/08/messaging/types" xmlns:typ1="http://api.relayhealth.com/2012/05/messaging/types">
+   <soap:Header/>
+   <soap:Body>
+      <mes:post>
+         <mes:request>
+            <typ:Attachments>
+               <typ:attachmentrequest>
+                  <typ:Content>ABCDEF1234567890</typ:Content>
+                  <typ:ContentMimeType>Text</typ:ContentMimeType>
+                  <typ:Encoding>Text</typ:Encoding>
+                  <typ:FileName>Test.txt</typ:FileName>
+                  <typ:Id>21EC2020-3AEA-1069-A2DD-08002B30309D</typ:Id>
+               </typ:attachmentrequest>
+            </typ:Attachments>
+            <typ:Body>Test Direct Message</typ:Body>
+            <typ:CC>
+               <typ1:address>
+                  <typ1:Type>Direct</typ1:Type>
+                  <typ1:Value>test@direct.relayhealth.com</typ1:Value>
+               </typ1:address>
+            </typ:CC>
+            <typ:From>
+               <typ1:Type>Direct</typ1:Type>
+               <typ1:Value>test@direct.relayhealth.com</typ1:Value>
+            </typ:From>
+            <typ:Id>21EC2020-3AEA-1069-A2DD-08002B30309D</typ:Id>
+            <typ:Subject>Test Message</typ:Subject>
+            <typ:To>
+               <typ1:address>
+                  <typ1:Type>Direct</typ1:Type>
+                  <typ1:Value>test@direct.relayhealth.com</typ1:Value>
+               </typ1:address>
+            </typ:To>
+         </mes:request>
+      </mes:post>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://api.relayhealth.com/2012/05/messaging/sendMessage/post" addDefaultAction="true" addDefaultTo="true"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://api.relayhealth.com/2012/05/messaging/sendMessage/postbyid" name="postbyid" bindingOperationName="postbyid" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="postbyid"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://api.integration.relayhealth.com/Messaging/SendMessage.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:mes="http://api.relayhealth.com/2012/05/messaging">
+   <soap:Header/>
+   <soap:Body>
+      <mes:postbyid>
+         <!--Optional:-->
+         <mes:id>23</mes:id>
+      </mes:postbyid>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://api.relayhealth.com/2012/05/messaging/sendMessage/postbyid"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>
