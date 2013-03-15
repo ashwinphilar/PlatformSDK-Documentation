@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default" name="SendMessage.SOAP.SoapUI" resourceRoot="" soapui-version="4.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="200508" name="soap11" type="wsdl" bindingName="{http://api.relayhealth.com/2012/05/messaging}soap11" soapVersion="1_2" anonymous="optional" definition="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/SendMessage.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/SendMessage.svc?wsdl"><con:part><con:url>https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/SendMessage.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="sendMessage" targetNamespace="http://api.relayhealth.com/2012/05/messaging" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://api.relayhealth.com/2012/05/messaging" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+<con:soapui-project activeEnvironment="Default" name="SendMessage.SOAP.SoapUI" resourceRoot="" soapui-version="4.5.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="200508" name="soap11" type="wsdl" bindingName="{http://api.relayhealth.com/2012/05/messaging}soap11" soapVersion="1_2" anonymous="optional" definition="https://api.integration.relayhealth.com/Messaging/SendMessage.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://api.integration.relayhealth.com/Messaging/SendMessage.svc?wsdl"><con:part><con:url>https://api.integration.relayhealth.com/Messaging/SendMessage.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="sendMessage" targetNamespace="http://api.relayhealth.com/2012/05/messaging" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://api.relayhealth.com/2012/05/messaging" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
   <wsp:Policy wsu:Id="soap11_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -320,23 +320,23 @@
       </wsa10:EndpointReference>
     </wsdl:port>
   </wsdl:service>
-</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://api.tws.relayhealth.com/Messaging/SendMessage.svc</con:endpoint><con:endpoint>https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/SendMessage.svc</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://api.relayhealth.com/2012/05/messaging/sendMessage/post" name="post" bindingOperationName="post" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="post" useWsAddressing="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://api.tws.relayhealth.com/Messaging/SendMessage.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:mes="http://api.relayhealth.com/2012/05/messaging" xmlns:typ="http://api.relayhealth.com/2012/08/messaging/types" xmlns:typ1="http://api.relayhealth.com/2012/05/messaging/types">
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://api.integration.relayhealth.com/Messaging/SendMessage.svc</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://api.relayhealth.com/2012/05/messaging/sendMessage/post" name="post" bindingOperationName="post" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="post" useWsAddressing="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://api.integration.relayhealth.com/Messaging/SendMessage.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:mes="http://api.relayhealth.com/2012/05/messaging" xmlns:typ="http://api.relayhealth.com/2012/08/messaging/types" xmlns:typ1="http://api.relayhealth.com/2012/05/messaging/types">
    <soap:Header/>
    <soap:Body>
       <mes:post>
          <mes:request>
             <typ:Attachments>               
             </typ:Attachments>
-            <typ:Body>Test Direct Message</typ:Body>
+            <typ:Body>Hello Direct Messaging</typ:Body>
             <typ:CC>
                <typ1:address>
                   <typ1:Type>Direct</typ1:Type>
-                  <typ1:Value>sunitha.pitlaleaf@relayhealth.com</typ1:Value>
+                  <typ1:Value>training.01@direct.integration.relayhealth.com</typ1:Value>
                </typ1:address>
             </typ:CC>
             <typ:From>
                <typ1:Type>Direct</typ1:Type>
-               <typ1:Value>sunitha.pitlaleaf@relayhealth.com</typ1:Value>
+               <typ1:Value>training.12@direct.integration.relayhealth.com</typ1:Value>
             </typ:From>
             <typ:OnBehalfOf>
                <typ1:Type>Direct</typ1:Type>
@@ -347,13 +347,13 @@
             <typ:To>
                <typ1:address>
                   <typ1:Type>Direct</typ1:Type>
-                  <typ1:Value>sunitha.pitlaleaf@relayhealth.com</typ1:Value>
+                  <typ1:Value>training.03@direct.integration.relayhealth.com</typ1:Value>
                </typ1:address>
             </typ:To>
          </mes:request>
       </mes:post>
    </soap:Body>
-</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://api.relayhealth.com/2012/05/messaging/sendMessage/post" addDefaultAction="true" addDefaultTo="true"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://api.relayhealth.com/2012/05/messaging/sendMessage/postbyid" name="postbyid" bindingOperationName="postbyid" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="postbyid"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/SendMessage.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:mes="http://api.relayhealth.com/2012/05/messaging">
+</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://api.relayhealth.com/2012/05/messaging/sendMessage/post" addDefaultAction="true" addDefaultTo="true"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://api.relayhealth.com/2012/05/messaging/sendMessage/postbyid" name="postbyid" bindingOperationName="postbyid" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="postbyid"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://api.integration.relayhealth.com/Messaging/SendMessage.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:mes="http://api.relayhealth.com/2012/05/messaging">
    <soap:Header/>
    <soap:Body>
       <mes:postbyid>
