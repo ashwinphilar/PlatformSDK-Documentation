@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b6676fa2-0125-4ec3-9992-80e109f8c988" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/MessageDisposed.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="messageDisposed.wsdl" MetadataType="Wsdl" ID="47661c79-5c11-4163-a173-f8d14efd11c8" SourceId="1" SourceUrl="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/MessageDisposed.svc?wsdl" />
+    <MetadataFile FileName="MessageDisposed.disco" MetadataType="Disco" ID="2797806d-7aeb-43ae-8d20-17e01d82d2cd" SourceId="1" SourceUrl="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/MessageDisposed.svc?disco" />
+    <MetadataFile FileName="MessageDisposed1.wsdl" MetadataType="Wsdl" ID="98914373-f3b7-440e-b392-d38d7bcd4c29" SourceId="1" SourceUrl="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/MessageDisposed.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

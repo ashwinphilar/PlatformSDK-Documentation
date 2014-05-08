@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C73E3718-6AD9-4531-BB35-C9EB5F98BDCF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SecureMessagingApiClient</RootNamespace>
+    <AssemblyName>SecureMessagingApiClient</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CertificateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CertificateForm.Designer.cs">
+      <DependentUpon>CertificateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DispositionRow.cs" />
+    <Compile Include="ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AttachmentHelper.cs" />
+    <Compile Include="Helpers\MessageDisposedHelper.cs" />
+    <Compile Include="Helpers\MessageReceivedHelper.cs" />
+    <Compile Include="Helpers\MessagesHelper.cs" />
+    <Compile Include="Helpers\SecureMessagingHelper.cs" />
+    <Compile Include="Helpers\SendMessageHelper.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageRow.cs" />
+    <Compile Include="MessagesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessagesForm.Designer.cs">
+      <DependentUpon>MessagesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AttachmentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AttachmentControl.Designer.cs">
+      <DependentUpon>AttachmentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\MessageControl.Designer.cs">
+      <DependentUpon>MessageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SendMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SendMessageForm.Designer.cs">
+      <DependentUpon>SendMessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AttachmentServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MessageDisposedServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MessageReceivedServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MessageServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MessagesServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SendMessageServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CertificateForm.resx">
+      <DependentUpon>CertificateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorForm.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessagesForm.resx">
+      <DependentUpon>MessagesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AttachmentControl.resx">
+      <DependentUpon>AttachmentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\MessageControl.resx">
+      <DependentUpon>MessageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SendMessageForm.resx">
+      <DependentUpon>SendMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\DispositionColumn.datasource" />
+    <None Include="Properties\DataSources\DispositionRow.datasource" />
+    <None Include="Properties\DataSources\MessageRow.datasource" />
+    <None Include="Properties\DataSources\RelayHealth.Api.Rest.SoapFacade.Contracts.Data.Messaging.MessageListResponse.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\AttachmentServiceReference\messageAttachment.wsdl" />
+    <None Include="Service References\AttachmentServiceReference\MessageAttachment1.wsdl" />
+    <None Include="Service References\AttachmentServiceReference\SecureMessagingApiClient.AttachmentServiceReference.attachment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MessageDisposedServiceReference\messageDisposed.wsdl" />
+    <None Include="Service References\MessageDisposedServiceReference\MessageDisposed1.wsdl" />
+    <None Include="Service References\MessageReceivedServiceReference\messageReceived.wsdl" />
+    <None Include="Service References\MessageReceivedServiceReference\MessageReceived1.wsdl" />
+    <None Include="Service References\MessageServiceReference\Message.wsdl" />
+    <None Include="Service References\MessageServiceReference\message1.wsdl" />
+    <None Include="Service References\MessageServiceReference\SecureMessagingApiClient.MessageServiceReference.message.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MessagesServiceReference\messages.wsdl" />
+    <None Include="Service References\MessagesServiceReference\Messages1.wsdl" />
+    <None Include="Service References\MessagesServiceReference\SecureMessagingApiClient.MessagesServiceReference.messagelistresponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SendMessageServiceReference\SendMessage.wsdl" />
+    <None Include="Service References\SendMessageServiceReference\sendMessage1.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AttachmentServiceReference\" />
+    <WCFMetadataStorage Include="Service References\MessageDisposedServiceReference\" />
+    <WCFMetadataStorage Include="Service References\MessageReceivedServiceReference\" />
+    <WCFMetadataStorage Include="Service References\MessageServiceReference\" />
+    <WCFMetadataStorage Include="Service References\MessagesServiceReference\" />
+    <WCFMetadataStorage Include="Service References\SendMessageServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AttachmentServiceReference\MessageAttachment.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AttachmentServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AttachmentServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AttachmentServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageDisposedServiceReference\MessageDisposed.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageDisposedServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageDisposedServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageDisposedServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageReceivedServiceReference\MessageReceived.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageReceivedServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageReceivedServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageReceivedServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessagesServiceReference\Messages.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessagesServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessagesServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessagesServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageServiceReference\Message.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SendMessageServiceReference\SendMessage.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SendMessageServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SendMessageServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SendMessageServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

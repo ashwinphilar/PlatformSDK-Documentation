@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bebaf1e0-2b94-48cd-96fc-6b3189603ac1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/Messages.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="messages.wsdl" MetadataType="Wsdl" ID="a0227b17-0e0e-4e15-9036-ca53016666cd" SourceId="1" SourceUrl="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/Messages.svc?wsdl" />
+    <MetadataFile FileName="Messages1.wsdl" MetadataType="Wsdl" ID="d9b38b54-e05e-4c63-9b72-1b47e509c3d2" SourceId="1" SourceUrl="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/Messages.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Messages.disco" MetadataType="Disco" ID="401c50b2-8b07-4410-8802-6e51df536649" SourceId="1" SourceUrl="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/Messages.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

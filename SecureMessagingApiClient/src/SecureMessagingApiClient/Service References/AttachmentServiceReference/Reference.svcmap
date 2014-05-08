@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f0be7e8b-57dc-40d3-a44a-98767be9dc18" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/MessageAttachment.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="messageAttachment.wsdl" MetadataType="Wsdl" ID="d5a7c7af-679f-49ce-8397-7833d7c21da9" SourceId="1" SourceUrl="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/MessageAttachment.svc?wsdl" />
+    <MetadataFile FileName="MessageAttachment1.wsdl" MetadataType="Wsdl" ID="863e6ab2-8a14-4c3a-9acd-65dd2c8fce0f" SourceId="1" SourceUrl="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/MessageAttachment.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="MessageAttachment.disco" MetadataType="Disco" ID="c4820fc8-0065-4924-8c62-9389a0e1fc58" SourceId="1" SourceUrl="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/MessageAttachment.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

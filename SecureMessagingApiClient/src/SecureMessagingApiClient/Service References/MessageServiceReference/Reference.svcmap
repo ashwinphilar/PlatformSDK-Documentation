@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="94038a71-284f-4956-9e7f-f067d8ffe356" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/Message.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Message.wsdl" MetadataType="Wsdl" ID="680214cb-ffe9-4870-9e17-bd5f66620468" SourceId="1" SourceUrl="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/Message.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Message.disco" MetadataType="Disco" ID="ad720e14-84d5-4974-9bd8-c659c299f2f8" SourceId="1" SourceUrl="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/Message.svc?disco" />
+    <MetadataFile FileName="message1.wsdl" MetadataType="Wsdl" ID="806116c8-ab2b-4127-a395-787ebe20e864" SourceId="1" SourceUrl="https://api.aphilar-t5500.na.corp.mckesson.com/Messaging/Message.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
